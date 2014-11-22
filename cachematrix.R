@@ -1,7 +1,6 @@
 ## The two functions realize the storing and calculating the inverse matrix, so that if the matrix
 ## are not changing, we could directly get its inverse rather than recompute it.
 
-
 ## makeCacheMatrix() creates a list, which stores the original matrix and its inverse matrix.  
 ## The four functions are used to set or get the value of the matrix and the inverse matrix.
 
@@ -22,8 +21,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheInverse() accesses the list created when makeCacheMatrix was called. If the inverse has not yet been calculatd, 
-## cacheInverse will calculate it and store it in the list. Else it will return the value of the inverse matrix.
+## cacheInverse() accesses the list created when makeCacheMatrix was called. If the inverse has
+## not yet been calculatd, cacheInverse will calculate it and store it in the list. 
+##Else it will return the value of the inverse matrix.
+
 cacheInverse <- function(x, ...) {
         m <- x$getinverse()    # access list and get the inverse matrix
         if(!is.null(m)) {      # if inverse matrix existed, return it
